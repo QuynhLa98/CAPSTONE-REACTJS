@@ -2,6 +2,9 @@ import { createBrowserHistory } from 'history'
 import { Route, Router, Switch } from 'react-router';
 import { Suspense, lazy } from 'react';
 import AdminTemplate from './templates/AdminTemplate/AdminTemplate';
+import CheckoutTemplate from './templates/CheckoutTemplate/CheckoutTemplate';
+import UserTemplate from './templates/UserTemplate/UserTemplate';
+import Loading from './components/Loading/Loading'
 import Films from './pages/Admin/Films/Film';
 import Showtime from './pages/Admin/ShowTime/ShowTime';
 import AddNew from './pages/Admin/Films/AddNew/AddNew';
@@ -10,7 +13,6 @@ import User from './pages/Admin/User/User';
 import AddUser from './pages/Admin/User/AddUser/AddUser';
 import EditUser from './pages/Admin/User/EditUser/EditUser';
 
-// const CheckoutTemplateLazy = lazy(() => import('./templates/CheckoutTemplate/CheckoutTemplate'))
 
 export const history = createBrowserHistory()
 
