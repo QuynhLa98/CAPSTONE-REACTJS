@@ -1,4 +1,4 @@
-import { SET_DANH_SACH_PHIM, SET_FILM_DANG_CHIEU, SET_FILM_SAP_CHIEU, SET_THONG_TIN_PHIM } from "../actions/type/QuanLyPhimType"
+import { SET_DANH_SACH_PHIM, SET_FILM_DANG_CHIEU, SET_FILM_SAP_CHIEU, SET_THONG_TIN_PHIM } from "../actions/type/QuanLyPhimType.js"
 import { SET_CHI_TIET_PHIM } from "../actions/type/QuanLyRapType"
 
 const stateDefault = {

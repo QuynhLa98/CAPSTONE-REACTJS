@@ -1,4 +1,4 @@
-import { SET_HE_THONG_RAP_CHIEU } from "../actions/type/QuanLyRapType"
+import { SET_HE_THONG_RAP_CHIEU } from "../actions/type/QuanLyRapType.js"
 
 const stateDefault = {
     heThongRapChieu: []

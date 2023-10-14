@@ -3,7 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { history } from '../../../../App';
-import { themNguoiDungAction } from '../../../../store/actions/type/QuanLyNguoiDungAction';
+import { themNguoiDungAction } from '../../../../store/actions/type/QuanLyNguoiDungAction'; 
 
 
 export default function AddUser() {
@@ -18,7 +18,7 @@ export default function AddUser() {
       matKhau: '',
       email: '',
       soDt: '',
-      maNhom: 'GP11',
+      maNhom: 'GP08',
       maLoaiNguoiDung: 'KhachHang',
       hoTen: '',
     },
