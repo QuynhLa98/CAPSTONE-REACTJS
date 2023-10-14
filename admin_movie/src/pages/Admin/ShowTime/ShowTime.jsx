@@ -5,7 +5,7 @@ import { DatePicker } from 'antd';
 import { InputNumber } from 'antd';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { quanLyRapService } from '../../../services/QuanLyRapService';
+import { QuanLyRapService, quanLyRapService } from '../../../services/QuanLyRapService';
 import moment from 'moment';
 import { quanLyDatVeService } from '../../../services/QuanLyDatVeService';
 
@@ -38,7 +38,7 @@ export default function Showtime(props) {
   console.log(state.heThongRapChieu)
   useEffect(async () => {
     try {
-      let result = await quanLyRapService.layThongTinHeThongRap()
+      let result = await QuanLyRapService.layThongTinHeThongRap()
 
       setState({
         ...state,
@@ -53,7 +53,7 @@ export default function Showtime(props) {
   const handleChangeHeThongRap = async (value) => {
     // từ hệ thống rạp call api lấy thông tin hệ thống rạp
     try {
-      let result = await quanLyRapService.layThongTinCumRap(value)
+      let result = await QuanLyRapService.layThongTinCumRap(value)
       // gán giá trị cụm rạp vào state.cumRap
       setState({
         ...state,

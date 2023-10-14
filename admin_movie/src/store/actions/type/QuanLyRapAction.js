@@ -1,11 +1,11 @@
-import { quanLyRapService } from "../../services/QuanLyRapService";
+import { QuanLyRapService } from "../../services/QuanLyRapService";
 import { SET_CHI_TIET_PHIM, SET_HE_THONG_RAP_CHIEU } from "./QuanLyRapType";
 
 
 export const layDanhSachHeThongRapAction = () => {
     return async dispatch => {
         try {
-            const result = await quanLyRapService.layDanhSachHeThongRap()
+            const result = await QuanLyRapService.layDanhSachHeThongRap()
             console.log("result: ", result.data.content);
             if (result.status === 200) {
                 dispatch({
@@ -24,7 +24,7 @@ export const layDanhSachHeThongRapAction = () => {
 export const layThongTinChiTietPhim = (id) => {
     return async dispatch => {
         try {
-            const result = await quanLyRapService.layThongTinLichChieuPhim(id)
+            const result = await QuanLyRapService.layThongTinLichChieuPhim(id)
             console.log("result: ", result);
 
             dispatch({

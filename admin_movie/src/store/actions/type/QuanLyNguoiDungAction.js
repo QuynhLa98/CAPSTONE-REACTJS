@@ -1,10 +1,10 @@
-import { quanLyNguoiDungService } from "../../../services/QuanLyNguoiDungService"
+import { QuanLyNguoiDungService } from "../../../services/QuanLyNguoiDungService"
 import { CAP_NHAT_NGUOI_DUNG, DANG_KY_ACTION, DANG_NHAP_ACTION, LAY_DANH_SACH_NGUOI_DUNG, SET_THONG_TIN_NGUOI_DUNG, SET_THONG_TIN_USER } from "./type/QuanLyNguoiDungType"
 import { history } from '../../../App'
 export const dangNhapAction = (thongTinDangNhap) => {
     return async (dispatch) => {
         try {
-            const result = await quanLyNguoiDungService.dangNhap(thongTinDangNhap)
+            const result = await QuanLyNguoiDungService.dangNhap(thongTinDangNhap)
             console.log("result: ", result);
             if (result.status === 200) {
                 dispatch({
@@ -27,7 +27,7 @@ export const dangNhapAction = (thongTinDangNhap) => {
 export const dangKyAction = (thongTinDangKy) => {
     return async (dispatch) => {
         try {
-            const result = await quanLyNguoiDungService.dangKy(thongTinDangKy)
+            const result = await QuanLyNguoiDungService.dangKy(thongTinDangKy)
             alert('Đăng ký tài khoản thành công !')
             console.log("result: ", result);
             if (result.status === 200) {
@@ -52,7 +52,7 @@ export const dangKyAction = (thongTinDangKy) => {
 export const layThongTinNguoiDungAction = (taiKhoan) => {
     return async dispatch => {
         try {
-            const result = await quanLyNguoiDungService.layThongTinNguoiDung(taiKhoan)
+            const result = await QuanLyNguoiDungService.layThongTinNguoiDung(taiKhoan)
 
             console.log("result: ", result);
 
@@ -73,7 +73,7 @@ export const layThongTinNguoiDungAction = (taiKhoan) => {
 export const capNhatThongTinNguoiDungAction = (formData) => {
     return async dispatch => {
         try {
-            const result = await quanLyNguoiDungService.capNhatThongTinNguoiDung(formData)
+            const result = await QuanLyNguoiDungService.capNhatThongTinNguoiDung(formData)
             alert('Cập nhật tài khoản thành công !')
             console.log("result: ", result);
 
@@ -95,7 +95,7 @@ export const capNhatThongTinNguoiDungAction = (formData) => {
 export const layDanhSachNguoiDungAction = (taiKhoan = '') => {
     return async dispatch => {
         try {
-            const result = await quanLyNguoiDungService.layDanhSachNguoiDung(taiKhoan)
+            const result = await QuanLyNguoiDungService.layDanhSachNguoiDung(taiKhoan)
             console.log("result: ", result);
 
             if (result.status === 200) {
@@ -115,7 +115,7 @@ export const layDanhSachNguoiDungAction = (taiKhoan = '') => {
 export const layThongTinUserAction = (taiKhoan) => {
     return async dispatch => {
         try {
-            const result = await quanLyNguoiDungService.layThongTinUser(taiKhoan)
+            const result = await QuanLyNguoiDungService.layThongTinUser(taiKhoan)
             console.log("result: ", result);
             if (result.status === 200) {
                 dispatch({
@@ -134,7 +134,7 @@ export const layThongTinUserAction = (taiKhoan) => {
 export const themNguoiDungAction = (thongTin) => {
     return async dispatch => {
         try {
-            const result = await quanLyNguoiDungService.themNguoiDung(thongTin)
+            const result = await QuanLyNguoiDungService.themNguoiDung(thongTin)
             alert('Thêm người dùng thành công !')
             console.log("result: ", result.data.content);   
 
@@ -150,7 +150,7 @@ export const themNguoiDungAction = (thongTin) => {
 export const capNhatNguoiDungAction = (taiKhoan) => {
     return async dispatch => {
         try {
-            let result = await quanLyNguoiDungService.capNhatNguoiDung(taiKhoan)
+            let result = await QuanLyNguoiDungService.capNhatNguoiDung(taiKhoan)
             alert('Cập nhật người dùng thành công !')
             console.log("result: ", result); 
             if (result.status === 200) {

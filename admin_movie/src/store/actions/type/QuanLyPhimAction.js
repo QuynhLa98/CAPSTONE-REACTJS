@@ -1,12 +1,12 @@
 import { history } from "../../../App"
-import { quanLyPhimService } from "../../../services/QuanLyPhimService"
+import { QuanLyPhimService } from "../../../services/QuanLyPhimService"
 import { SET_DANH_SACH_PHIM, SET_THONG_TIN_PHIM } from "./QuanLyPhimType"
 
 
 export const layDanhSachPhimAction = (tenPhim = '') => {
     return async (dispatch) => {
         try {
-            const result = await quanLyPhimService.layDanhSachPhim(tenPhim)
+            const result = await QuanLyPhimService.layDanhSachPhim(tenPhim)
 
             console.log('result', result)
             // đưa lên reducer
@@ -24,7 +24,7 @@ export const layDanhSachPhimAction = (tenPhim = '') => {
 export const themPhimUploadHinhAction = (formData) => {
     return async (dispatch) => {
         try {
-            let result = await quanLyPhimService.themPhimUploadHinh(formData)
+            let result = await QuanLyPhimService.themPhimUploadHinh(formData)
             alert('Thêm phim thành công!')
             console.log("result: ", result);
 
@@ -39,7 +39,7 @@ export const themPhimUploadHinhAction = (formData) => {
 export const CapNhatPhimUploadAction = (formData) => {
     return async (dispatch) => {
         try {
-            let result = await quanLyPhimService.capNhatPhimUpload(formData)
+            let result = await QuanLyPhimService.capNhatPhimUpload(formData)
             alert('Cập nhật phim thành công!')
             console.log("result: ", result);
             dispatch(layDanhSachPhimAction())
@@ -54,7 +54,7 @@ export const CapNhatPhimUploadAction = (formData) => {
 export const layThongTinPhimAction = (maPhim) => {
     return async (dispatch) => {
         try {
-            const result = await quanLyPhimService.layThongTinPhim(maPhim)
+            const result = await QuanLyPhimService.layThongTinPhim(maPhim)
 
             console.log('result', result)
             dispatch({
@@ -71,7 +71,7 @@ export const layThongTinPhimAction = (maPhim) => {
 export const xoaPhimAction = (maPhim) => {
     return async (dispatch) => {
         try {
-            const result = await quanLyPhimService.xoaPhim(maPhim)
+            const result = await QuanLyPhimService.xoaPhim(maPhim)
 
             console.log('result', result.data.content)
            alert('Xóa phim thành công !')
