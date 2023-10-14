@@ -1,5 +1,5 @@
 import { QuanLyRapService } from "../../services/QuanLyRapService";
-import { SET_CHI_TIET_PHIM, SET_HE_THONG_RAP_CHIEU } from "./QuanLyRapType.js";
+import {SET_CHI_TIET_PHIM, SET_HE_THONG_RAP_CHIEU} from "./QuanLyRapType.js"
 
 
 export const layDanhSachHeThongRapAction = () => {

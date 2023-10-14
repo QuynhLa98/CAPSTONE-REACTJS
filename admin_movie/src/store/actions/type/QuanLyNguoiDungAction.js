@@ -1,5 +1,5 @@
-import { QuanLyNguoiDungService } from "../../../services/QuanLyNguoiDungService"
-import { CAP_NHAT_NGUOI_DUNG, DANG_KY_ACTION, DANG_NHAP_ACTION, LAY_DANH_SACH_NGUOI_DUNG, SET_THONG_TIN_NGUOI_DUNG, SET_THONG_TIN_USER } from "./type/QuanLyNguoiDungType"
+import { QuanLyNguoiDungService} from "../../../services/QuanLyNguoiDungService"
+import { DANG_KY_ACTION, DANG_NHAP_ACTION, LAY_DANH_SACH_NGUOI_DUNG, SET_THONG_TIN_NGUOI_DUNG, SET_THONG_TIN_USER } from "./QuanLyNguoiDungType.js"
 import { history } from '../../../App'
 export const dangNhapAction = (thongTinDangNhap) => {
     return async (dispatch) => {

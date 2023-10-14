@@ -1,6 +1,6 @@
 import { history } from "../../../App"
 import { QuanLyPhimService } from "../../../services/QuanLyPhimService"
-import { SET_DANH_SACH_PHIM, SET_THONG_TIN_PHIM } from "./QuanLyPhimType.js"
+import {SET_DANH_SACH_PHIM, SET_THONG_TIN_PHIM} from "./QuanLyPhimType.js"
 
 
 export const layDanhSachPhimAction = (tenPhim = '') => {
